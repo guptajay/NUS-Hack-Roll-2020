@@ -26,8 +26,8 @@ while (i>0)
     
     try 
         [data,timestamp] = readAngularVelocity(BNO055Sensor) ;
-        k(i,4) = round(data(1),2) *(180/pi) ; k(i,5) = round(data(2),2)*(180/pi) ; k(i,6) = round(data(3),2)*(180/pi) ; 
-        o(j,4) = round(data(1),2)*(180/pi) ; o(j,5) = round(data(2),2)*(180/pi) ; o(j,6) = round(data(3),2)*(180/pi) ; 
+        k(i,4) = round(data(1),2) ; k(i,5) = round(data(2),2) ; k(i,6) = round(data(3),2) ; 
+        o(j,4) = round(data(1),2) ; o(j,5) = round(data(2),2) ; o(j,6) = round(data(3),2) ; 
     catch
         errorcountergyro = errorcountergyro + 1 ; 
         k(i,4) = k((i-1),4) ; k(i,5) = k((i-1),5) ; k(i,6) = k((i-1),6) ; 
