@@ -3,7 +3,7 @@
 
 ![News Bias](news_bias.jpg)
 
-**Perspective Bot** is a **Chrome Extension** where we can search for the news we see on the internet and get more context about it. Using Machine Learning algorithms like BERT (Bidirectional Encoder Representations from Transformers) and clustering, the bot can show **different perspectives about the news** with the most hits by pulling tweets from the last one week using the Twitter API. 
+**Vigilant Bot** is an **Embedded Hardware device** which can detect distress calls using complex gesture movements, signals and help to spread the distress signals in a variety of ways such as text messages to family and automatic calls to authorities. Using Inertial Measurement Units (IMU) combined with Deep Learning algorithms served on a Matlab backend, the bot can **detect distress calls** with a pinpoint accuracy and take action on the same. 
 
 ![Perspective Bot](perspectivebot.png)
 
@@ -14,9 +14,6 @@
 
 ### Solution
 Our team built a pipeline based on the state-of-the-art BERT model with Twitter API to gather all the information available on Twitter about the query searched and automatically cluster them based on different opinions grouped by Country using the Google Maps API to reduce bias by presenting different view-points about the same query.  
-* Our team integrated Arduino and MATLAB to get live stream data from a BNO055 Inertial Measurement Unit (IMU) sampling at a frequency of 100 Hz attached to a person's wrist.
-* The incoming data in MATLAB is continuously logged into a csv file which is being simultaneously accessed by 
-
 * The selection process begins by **gathering all the relevant tweets** from the last one week about the query searched using **Twitter API**.
 * The tweets extracted are passed in the BERT Natural Language Processing model which converts them into detailed high dimensional vectors. The vectors are then automatically clustered using K-Means++ on the basis of **different view-points and opinions** to gather more perspective about the news. The best representative tweet from each cluster is selected.
 * The results obtained are **grouped by country** (obtained from **Google Maps API**), and shown on a website built using **BootStrap** where the user can gather more **context and perspective** as well as do further research and reading of the same. 
