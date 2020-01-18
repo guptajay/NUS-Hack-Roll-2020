@@ -1,11 +1,11 @@
 # VigilantBot 🚨 
 > Violence does not discriminate by race, religion, culture, class or country. Worldwide, one in three women have experienced either physical and/or sexual violence, and more than 15 million girls aged 15-19 years have experienced rape.
 
-![News Bias](news_bias.jpg)
+![Crime Rates](img/c_r.jpg)
 
 **Vigilant Bot** is an **Embedded Hardware device** which can detect distress calls using complex hand gestures and help to convey the distress signals in ways such as text messages to family and automatic calls to authorities. Using Inertial Measurement Units (IMU) combined with Deep Learning algorithms served on a Matlab backend, the bot can **detect distress calls** with pinpoint accuracy and take action on the same on a real time basis.
 
-![Perspective Bot](perspectivebot.png)
+![VigilantBot](img/main.jpeg)
 
 ### Problem Statement
 * The process of dialling a number and calling someone in an emergency can prove to be time taking.  We need FASTER ways of doing so because in such situations, every second is important.  
