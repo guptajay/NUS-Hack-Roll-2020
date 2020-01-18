@@ -81,9 +81,9 @@ def panda():
             result = model.predict(input_data)
             ans = result[0]
             ans_f = ans[0]
-            # print(ans_f)
+            print(ans_f)
 
-            if(snap_count == 4 and snap_count != 0):
+            if(snap_count == 3 and snap_count != 0):
                 email()
                 snap_count = 0
 
