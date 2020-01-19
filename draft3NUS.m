@@ -20,10 +20,7 @@ while (i>0)
         catch
             o(j,1)= 0 ; o(j,2) = 0 ; o(j,3) = 9.8 ;
         end
-    end
-    
-  
-    
+    end   
     try 
         [data,timestamp] = readAngularVelocity(BNO055Sensor) ;
         k(i,4) = round(data(1),2) *(180/pi) ; k(i,5) = round(data(2),2)*(180/pi) ; k(i,6) = round(data(3),2)*(180/pi) ; 

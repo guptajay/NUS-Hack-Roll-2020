@@ -8,6 +8,26 @@ n=1;
 j =1 ;
 o=[]; 
 while (i>0)
+    if ( mod(i,20) ==0 )
+        [status,timestamp] = readCalibrationStatus(BNO055Sensor) ;
+         if ( status.Accelerometer == 'uncalibrated' )
+              writeDigitalPin(a, 'D10', 0) ;
+              writeDigitalPin(a, 'D11', 1)
+         else
+              writeDigitalPin(a, 'D11', 0) ; 
+              writeDigitalPin(a, 'D10', 1)
+         end
+         
+         if ( status.Gyroscope == 'uncalibrated' )
+              writeDigitalPin(a, 'D9', 1) ;
+              writeDigitalPin(a, 'D6', 0)
+         else
+              writeDigitalPin(a, 'D6', 1) ; 
+              writeDigitalPin(a, 'D9', 0)
+         end
+    end
+    
+                           
     try
         [data,timestamp] = readAcceleration(BNO055Sensor) ;
         k(i,1) = round(data(1),2) ; k(i,2) = round(data(2),2) ; k(i,3) = round(data(3),2) ; 
@@ -20,14 +40,11 @@ while (i>0)
         catch
             o(j,1)= 0 ; o(j,2) = 0 ; o(j,3) = 9.8 ;
         end
-    end
-    
-  
-    
+    end   
     try 
         [data,timestamp] = readAngularVelocity(BNO055Sensor) ;
-        k(i,4) = round(data(1),2) ; k(i,5) = round(data(2),2) ; k(i,6) = round(data(3),2) ; 
-        o(j,4) = round(data(1),2) ; o(j,5) = round(data(2),2) ; o(j,6) = round(data(3),2) ; 
+        k(i,4) = round(data(1),2) *(180/pi) ; k(i,5) = round(data(2),2)*(180/pi) ; k(i,6) = round(data(3),2)*(180/pi) ; 
+        o(j,4) = round(data(1),2)*(180/pi) ; o(j,5) = round(data(2),2)*(180/pi) ; o(j,6) = round(data(3),2)*(180/pi) ; 
     catch
         errorcountergyro = errorcountergyro + 1 ; 
         k(i,4) = k((i-1),4) ; k(i,5) = k((i-1),5) ; k(i,6) = k((i-1),6) ; 
