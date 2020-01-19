@@ -1,5 +1,5 @@
 # VigilantBot 🚨 
-> Violence does not discriminate by race, religion, culture, class or country. Worldwide, one in three women have experienced either physical and/or sexual violence, and more than 15 million girls aged 15-19 years have experienced rape.
+> Violence does not discriminate by race, religion, culture, class or country. Worldwide, one in three women have experienced either physical and/or sexual violence, and more than 15 million girls aged 15-19 years have experienced some form of harassment.
 
 ![Crime Rates](img/crime.jpg)
 
