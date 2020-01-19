@@ -75,6 +75,8 @@ def panda():
     i = 0
     count = 1
     snap_count = 0
+    distress_email = 0
+    j = 0
     while(1):
         try:
             input_data = []
@@ -85,9 +87,17 @@ def panda():
             ans_f = ans[0]
             # print(ans_f)
 
+            if(distress_email == 1):
+                j += j
+
             if(snap_count == 4 and snap_count != 0):
-                email()
-                snap_count = 0
+                if(distress == 1 and j < 5):
+                    continue
+                else:
+                    email()
+                    snap_count = 0
+                    distress_email = 1
+                    j = 0
 
             if(ans_f > 0.5):
                 print("==================")
