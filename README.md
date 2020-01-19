@@ -17,9 +17,9 @@ We built a pipeline based on the state-of-the-art Intertial Measurement Unit usi
 * A continuous data link is established between **MATLAB** and **TensorFlow** to enable live hand gesture detection using a **deep learning** model. Given the continuous inflow of data, TensorFlow makes approximately 2 predictions every second using an **input vector containing 480 data points**.
 * If a critical/target gesture is detected by TensorFlow, an **e-mail is sent** on behalf of the bot to the added Emergency Contact notifying them on the distress call with the **victim's details such as name, location, etc**.
 
-### Screenshots
-![Click](http://52.246.249.29:3030/public/screen3.jpg)
-![Webpage](http://52.246.249.29:3030/public/screen4.png)
+### Working
+![Working_1](img/working_1.jpeg)
+![Working_2](img/working_2.jpeg)
 
 ### Installation
 1. Download the Matlab files for supporting the backend from the [GitHub Repository](https://github.com/guptajay/NUS-Hack-Roll-2020).
