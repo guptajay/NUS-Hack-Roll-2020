@@ -14,8 +14,7 @@ model = load_model('/Users/jay/Documents/Projects/NUS-Hack-Roll-2020/model.h5')
 
 
 def email():
-    timestamp = 1545730073
-    dt_object = datetime.fromtimestamp(timestamp)
+    dateTimeObj = datetime.now()
     gmail_user = 'botvigilant@gmail.com'
     gmail_password = 'jaygupta123456789'
 
@@ -35,7 +34,7 @@ def email():
                     <p>Dear Mehul,<br />
                     This is a distress call from Jay Gupta who has listed you as an emergency contact. Please take suitable action for the same.<br /><br />
                     <strong>Details:</strong><br />
-                    <strong>Time: </strong> """ + str(dt_object) + """ <br />
+                    <strong>Time: </strong> """ + str(dateTimeObj) + """ <br />
                     <strong>Place: </strong> Tembusu College, 26 College Avenue East, Singapore</p>
                     <br />
                     <hr />
