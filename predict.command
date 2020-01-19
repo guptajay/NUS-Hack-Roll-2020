@@ -77,8 +77,11 @@ def panda():
     snap_count = 0
     distress_email = 0
     j = 0
+    k = 0
+    t = -205
     while(1):
         try:
+            k = k+1
             input_data = []
             input_data.append(predict(i))
             input_data = np.array(input_data)
@@ -87,17 +90,12 @@ def panda():
             ans_f = ans[0]
             # print(ans_f)
 
-            if(distress_email == 1):
-                j += j
-
-            if(snap_count == 4 and snap_count != 0):
-                if(distress == 1 and j < 5):
-                    continue
-                else:
-                    email()
-                    snap_count = 0
-                    distress_email = 1
-                    j = 0
+            if (k-t) == 200:
+                snap_count = 0
+            if(snap_count >= 4 and snap_count != 0 and (k-t) > 200):
+                email()
+                snap_count = 0
+                t = k
 
             if(ans_f > 0.5):
                 print("==================")
@@ -109,7 +107,7 @@ def panda():
             i = i + 60
             count = count + 1
             # print(count)
-            time.sleep(0.9)
+            time.sleep(0.7)
         except Exception as e:
             time.sleep(2)
             continue
