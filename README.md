@@ -29,7 +29,7 @@ We built a pipeline based on the state-of-the-art Inertial Measurement Unit usin
 3. Wear the device on the back side of your hand and gesture four times in case of a distress.
 
 ### Moving Forward
-* This prototype is the beginning of a more robust and concrete security system. A factor of disadvantage today is the **lack of datasets for gesture recognition** training for sensors such as the IMUs. Availability of such datasets can significantly boost the performance and accuracy of the Deep Learning Model which can enable detection of multiple hand gestures to perform a variety of tasks. For further information, refer [Arxiv](https://arxiv.org/pdf/1903.06643.pdf)  
+* This prototype is the beginning of a more robust and concrete security system. A factor of disadvantage today is the **lack of datasets for gesture recognition** training for sensors such as the IMUs. Availability of such datasets can significantly boost the performance and accuracy of the Deep Learning Model which can enable detection of multiple hand gestures to perform a variety of tasks. For further information, refer [Arxiv](https://arxiv.org/pdf/1903.06643.pdf).  
 * IMUs coupled with other sensors may be integrated into a smart wearable device, notably a **band or a watch**. It is so because such sensors can help provide additonal data to further improve the accuracy of hand gesture detection. 
 * Distress Alerts can be **seamlessly integrated into messaging, voice and other forms of notification services** and the bot can be further enhanced using **Robotic Process Automation (RPA)** to decrease error and downtime. 
 
