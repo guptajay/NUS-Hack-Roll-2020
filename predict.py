@@ -54,9 +54,11 @@ def email():
         server.login(gmail_user, gmail_password)
         server.sendmail(sent_from, to, msg.as_string())
         server.close()
+        print()
         print("==================")
         print("Distress E-Mail Sent!")
         print("==================")
+        print()
     except Exception as e:
         print(e)
 
